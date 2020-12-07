@@ -1,0 +1,40 @@
+[1mdiff --git a/src/main/java/com/innova/ServletInitializer.java b/src/main/java/com/innova/ServletInitializer.java[m
+[1mindex 1ef53d1..bd47abf 100644[m
+[1m--- a/src/main/java/com/innova/ServletInitializer.java[m
+[1m+++ b/src/main/java/com/innova/ServletInitializer.java[m
+[36m@@ -8,6 +8,10 @@[m [mpublic class ServletInitializer extends SpringBootServletInitializer {[m
+ 	@Override[m
+ 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {[m
+ 		return application.sources(SpringBootSoapApplication.class);[m
+[32m+[m		[32mreturn application.sources(SpringBootSoapApplication.class);[m
+[32m+[m		[32mreturn application.sources(SpringBootSoapApplication.class);[m
+[32m+[m		[32mreturn application.sources(SpringBootSoapApplication.class);[m
+[32m+[m		[32mreturn application.sources(SpringBootSoapApplication.class);[m
+ 	}[m
+ [m
+ }[m
+[1mdiff --git a/src/main/java/com/innova/config/WebServiceConfig.java b/src/main/java/com/innova/config/WebServiceConfig.java[m
+[1mindex 1336ab9..c104238 100644[m
+[1m--- a/src/main/java/com/innova/config/WebServiceConfig.java[m
+[1m+++ b/src/main/java/com/innova/config/WebServiceConfig.java[m
+[36m@@ -24,6 +24,20 @@[m [mpublic class WebServiceConfig extends WsConfigurerAdapter {[m
+         MessageDispatcherServlet servlet = new MessageDispatcherServlet();[m
+         servlet.setApplicationContext(applicationContext);[m
+         servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+[32m+[m[32m        servlet.setApplicationContext(applicationContext);[m
+[32m+[m[32m        servlet.setTransformWsdlLocations(true);[m
+         return new ServletRegistrationBean(servlet, "/ws/*");[m
+     }[m
+ [m
